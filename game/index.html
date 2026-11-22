@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Midnight — a heist game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="wrap">
+  <header id="hud">
+    <div class="hud-block alarm-block">
+      <span class="hud-label">ALARM</span>
+      <span id="alarm-meter"><span id="alarm-fill"></span></span>
+      <span id="alarm-num">0%</span>
+    </div>
+    <div class="hud-block"><span class="hud-label">TIME</span><span id="timer">05:00</span></div>
+    <div class="hud-block"><span class="hud-label">TAKE</span><span id="score">$0</span></div>
+    <div class="hud-block"><span class="hud-label">KIT</span><span id="smoke-count">Smoke ×3</span> · <span id="jammer-count">Jammer ×2 (−$100)</span></div>
+    <div class="hud-block"><span id="loot-count">Loot 0/4</span></div>
+  </header>
+  <p id="objective">Reach the vault — the safe holds the Meridian fortune.</p>
+  <div id="stage">
+    <canvas id="game" width="960" height="600"></canvas>
+    <div id="screen" class="hidden"></div>
+  </div>
+  <p id="toast"></p>
+  <div id="buttons">
+    <button id="btn-use">Use / Crack (E)</button>
+    <button id="btn-smoke">Smoke (1)</button>
+    <button id="btn-jammer">Jammer (2)</button>
+    <button id="btn-sneak">Sneak (Shift)</button>
+  </div>
+  <p id="selftest-result" class="hidden"></p>
+  <footer>
+    Meridian Midnight — an original heist game. Move with WASD or arrow keys, or click where the thief should go.
+    Sneak with Shift. Crack the vault with E, then Space on the dial. Reach the GETAWAY van before the alarm hits 100% or dawn breaks.
+  </footer>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>
